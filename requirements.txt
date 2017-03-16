@@ -1,0 +1,14 @@
+
+django-multiupload
+
+django-cleanup==0.4.2
+
+sorl-thumbnail==12.4a1
+
+awesome-slugify
+
+django-ordered-model
+
+django-pure-pagination
+
+django-modeltranslation==0.11
