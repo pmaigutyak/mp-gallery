@@ -1,0 +1,58 @@
+Metadata-Version: 1.1
+Name: django-mp-gallery
+Version: 1.1
+Summary: Django gallery app
+Home-page: https://github.com/pmaigutyak/mp-gallery
+Author: Paul Maigutyak
+Author-email: pmaigutyak@gmail.com
+License: MIT
+Download-URL: https://github.com/pmaigutyak/mp-gallery/archive/1.1.tar.gz
+Description: # MP-Gallery
+        
+        Django gallery app.
+        
+        ### Installation
+        
+        Install with pip:
+        
+        ```sh
+        $ pip install django-mp-gallery
+        ```
+        
+        ### Gallery.photos
+        Add photos to settings.py:
+        
+        ```
+        INSTALLED_APPS = [
+            'gallery.photos',
+        ]
+        ```
+        
+        ### Gallery.videos
+        Add videos to settings.py:
+        
+        ```
+        INSTALLED_APPS = [
+            'gallery.videos',
+        ]
+        ```
+        
+        Run migrations:
+        
+        ```
+        $ python manage.py migrate
+        ```
+        
+        ### Requirements
+        
+        App require this packages:
+        
+        * django-modeltranslation
+        * django-multiupload
+        * django-cleanup
+        * sorl-thumbnail
+        * awesome-slugify
+        * django-ordered-model
+        * django-pure-pagination
+        
+Platform: UNKNOWN
