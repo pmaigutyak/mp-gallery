@@ -22,8 +22,12 @@ class VideoAdmin(OrderedModelAdmin):
     list_filter = ('album', )
 
     def preview(self, item):
-        preview = get_thumbnail(item.logo, '100x100', crop='center', quality=99)
-        return '<img src="%s" style="width: 60px;" />' % preview.url
+        try:
+            preview = get_thumbnail(item.logo, '100x100', crop='center', quality=99)
+            return '<img src="%s" style="width: 60px;" />' % preview.url
+        except Exception as e:
+            return '--------'
+
     preview.allow_tags = True
 
 
