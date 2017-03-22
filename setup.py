@@ -1,28 +1,27 @@
 
-try:
-    from setuptools import setup
-except ImportError:
-    from distutils.core import setup
+from setuptools import setup, find_packages
+
+from gallery import __version__
+
+
+with open('requirements.txt') as f:
+    requires = f.read().splitlines()
+
+
+url = 'https://github.com/pmaigutyak/mp-gallery'
 
 
 setup(
     name='django-mp-gallery',
-    version='1.1',
+    version=__version__,
     description='Django gallery app',
     long_description=open('README.md').read(),
     author='Paul Maigutyak',
     author_email='pmaigutyak@gmail.com',
-    url='https://github.com/pmaigutyak/mp-gallery',
-    download_url='https://github.com/pmaigutyak/mp-gallery/archive/1.1.tar.gz',
-    packages=['gallery'],
+    url=url,
+    download_url='%s/archive/%s.tar.gz' % (url, __version__),
+    packages=find_packages(),
+    include_package_data=True,
     license='MIT',
-    install_requires=[
-        'django-modeltranslation==0.11',
-        'django-multiupload',
-        'django-cleanup==0.4.2',
-        'sorl-thumbnail==12.4a1',
-        'awesome-slugify',
-        'django-ordered-model',
-        'django-pure-pagination',
-    ]
+    install_requires=requires
 )
