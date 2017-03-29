@@ -5,7 +5,7 @@ from gallery.videos.models import Album, Video
 
 
 class AlbumTranslationOptions(TranslationOptions):
-    fields = ('name', 'description', )
+    fields = ('name', 'short_description', 'full_description', )
 
 
 class VideoTranslationOptions(TranslationOptions):

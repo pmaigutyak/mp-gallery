@@ -5,6 +5,7 @@ from django.utils.translation import ugettext as _
 
 from slugify import slugify_url
 from ordered_model.models import OrderedModel
+from ckeditor_uploader.fields import RichTextUploadingField
 
 
 def get_album_upload_path(instance, filename):
@@ -23,8 +24,11 @@ class Album(OrderedModel):
     logo = models.ImageField(
         _('Logo'), blank=True, upload_to=get_album_upload_path)
 
-    description = models.CharField(
+    short_description = models.CharField(
         _('Description'), max_length=255, blank=True)
+
+    full_description = RichTextUploadingField(
+        _('Full description'), max_length=10000, blank=True)
 
     objects = models.Manager()
 
