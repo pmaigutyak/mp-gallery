@@ -19,6 +19,13 @@ INSTALLED_APPS = [
 ]
 ```
 
+Add photos to urls.py:
+```
+urlpatterns = [
+	url(r'^photos/', include('gallery.photos.urls', namespace='photos')),
+]
+```
+
 ### Gallery.videos
 Add videos to settings.py:
 
