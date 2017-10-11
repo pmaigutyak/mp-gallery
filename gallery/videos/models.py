@@ -37,7 +37,7 @@ class Album(OrderedModel):
         return slugify_url(self.name, separator='_')
 
     def get_absolute_url(self):
-        return reverse('videos:album-list', kwargs={
+        return reverse('videos:video-list', kwargs={
             'album_slug': self.slug,
             'album_pk': self.pk
         })

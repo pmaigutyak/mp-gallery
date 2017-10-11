@@ -15,7 +15,7 @@ class AlbumsAdmin(OrderedModelAdmin, TranslationAdmin):
     list_display = ('name', 'move_up_down_links', )
 
 
-class VideoAdmin(OrderedModelAdmin):
+class VideoAdmin(OrderedModelAdmin, TranslationAdmin):
 
     list_display = ['name', 'preview', 'album', 'move_up_down_links']
 

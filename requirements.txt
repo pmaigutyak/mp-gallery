@@ -1,9 +1,9 @@
 
 django-multiupload
 
-django-cleanup==0.4.2
+django-cleanup
 
-sorl-thumbnail==12.4a1
+sorl-thumbnail
 
 awesome-slugify
 
@@ -11,6 +11,6 @@ django-ordered-model
 
 django-pure-pagination
 
-django-modeltranslation==0.11
+django-modeltranslation
 
-django-ckeditor==5.0.3
+django-ckeditor
