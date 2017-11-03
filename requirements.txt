@@ -14,3 +14,5 @@ django-pure-pagination
 django-modeltranslation
 
 django-ckeditor
+
+django-mp-misc

@@ -1,7 +1,9 @@
 
 from django.db import models
 from django.core.urlresolvers import reverse
+from django.conf import settings
 from django.utils.translation import ugettext as _
+from django.contrib.sites.models import Site
 
 from slugify import slugify_url
 from ordered_model.models import OrderedModel
@@ -18,6 +20,10 @@ def get_photo_upload_path(instance, filename):
 
 
 class Album(OrderedModel):
+
+    site = models.ForeignKey(
+        Site, verbose_name=_('Site'), related_name='photo_albums',
+        default=settings.SITE_ID)
 
     name = models.CharField(_('Name'), max_length=255, blank=False)
 

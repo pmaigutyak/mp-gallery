@@ -12,14 +12,16 @@ from gallery.videos.models import Video, Album
 
 class AlbumsAdmin(OrderedModelAdmin, TranslationAdmin):
 
-    list_display = ('name', 'move_up_down_links', )
+    list_display = ['name', 'site', 'move_up_down_links']
+
+    list_filter =  ['site']
 
 
 class VideoAdmin(OrderedModelAdmin, TranslationAdmin):
 
     list_display = ['name', 'preview', 'album', 'move_up_down_links']
 
-    list_filter = ('album', )
+    list_filter = ['album']
 
     def preview(self, item):
         try:

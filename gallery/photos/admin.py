@@ -15,7 +15,9 @@ from gallery.photos.models import Photo, Album
 
 class AlbumsAdmin(OrderedModelAdmin, TranslationAdmin):
 
-    list_display = ('name', 'move_up_down_links', )
+    list_display = ['name', 'site', 'move_up_down_links']
+
+    list_filter = ['site']
 
 
 class UploadPhotosAdminForm(forms.ModelForm):
@@ -34,7 +36,7 @@ class PhotosAdmin(OrderedModelAdmin):
 
     list_display = ['file', 'preview', 'album', 'move_up_down_links']
 
-    list_filter = ('album', )
+    list_filter = ['album']
 
     def preview(self, item):
         try:
