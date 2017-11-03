@@ -2,7 +2,7 @@
 from django.shortcuts import render, get_object_or_404
 
 from pure_pagination import Paginator
-from misc.sites.utils import get_site_id_from_request
+from misc.utils import get_site_id_from_request
 
 from gallery.photos.models import Album
 
